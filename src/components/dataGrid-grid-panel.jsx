@@ -36,10 +36,10 @@ export default function ControlMasterDetail() {
         composer: {
           name: "James Horner",
         },
-        firstChildArr: [
+        childExpandedArr: [
           {
             id: 0,
-            title: "Avatar",
+            title: "Tyuea",
             gross: 2847246203,
             budget: 237000000,
             director: "James Cameron",
@@ -53,7 +53,7 @@ export default function ControlMasterDetail() {
             tableData: [
               {
                 id: 1000,
-                title: "Avatar",
+                title: "qweqwe",
                 gross: 2847246203,
                 budget: 237000000,
                 director: "James Cameron",
@@ -80,7 +80,7 @@ export default function ControlMasterDetail() {
                 },
               },
               {
-                id: 100,
+                id: 145,
                 title: "BroadBand",
                 gross: 2847246203,
                 budget: 237000000,
@@ -94,7 +94,7 @@ export default function ControlMasterDetail() {
                 },
               },
               {
-                id: 100,
+                id: 1465,
                 title: "BroadBand",
                 gross: 2847246203,
                 budget: 237000000,
@@ -108,7 +108,7 @@ export default function ControlMasterDetail() {
                 },
               },
               {
-                id: 100,
+                id: 167,
                 title: "BroadBand",
                 gross: 2847246203,
                 budget: 237000000,
@@ -122,7 +122,7 @@ export default function ControlMasterDetail() {
                 },
               },
               {
-                id: 100,
+                id: 189,
                 title: "BroadBand",
                 gross: 2847246203,
                 budget: 237000000,
@@ -136,7 +136,7 @@ export default function ControlMasterDetail() {
                 },
               },
               {
-                id: 100,
+                id: 198,
                 title: "BroadBand",
                 gross: 2847246203,
                 budget: 237000000,
@@ -194,7 +194,7 @@ export default function ControlMasterDetail() {
                 },
               },
               {
-                id: 100,
+                id: 1001,
                 title: "BroadBand",
                 gross: 2847246203,
                 budget: 237000000,
@@ -208,7 +208,7 @@ export default function ControlMasterDetail() {
                 },
               },
               {
-                id: 100,
+                id: 1002,
                 title: "BroadBand",
                 gross: 2847246203,
                 budget: 237000000,
@@ -222,7 +222,7 @@ export default function ControlMasterDetail() {
                 },
               },
               {
-                id: 100,
+                id: 1003,
                 title: "BroadBand",
                 gross: 2847246203,
                 budget: 237000000,
@@ -236,7 +236,7 @@ export default function ControlMasterDetail() {
                 },
               },
               {
-                id: 100,
+                id: 1004,
                 title: "BroadBand",
                 gross: 2847246203,
                 budget: 237000000,
@@ -250,7 +250,7 @@ export default function ControlMasterDetail() {
                 },
               },
               {
-                id: 100,
+                id: 1005,
                 title: "BroadBand",
                 gross: 2847246203,
                 budget: 237000000,
@@ -414,9 +414,13 @@ export default function ControlMasterDetail() {
   );
 
   const DetailPanelContentComp = ({ row }) => {
+    const [expanded, setExpanded] = useState({
+        index:0,
+        value:true
+    });
+
     console.log(row, "row inside grid panel");
     // console.log(row.firstChild.tableData, "table data of first child");
-    const [expanded, setExpanded] = useState(true);
     // const dataGridPanel = {
     //     "rows": [
     //         {
@@ -518,57 +522,51 @@ export default function ControlMasterDetail() {
             flexDirection: "column",
           }}
         >
-          {row.firstChildArr.map((i) => {
+          {row.childExpandedArr.map((i,idx) => {
             return (
-
-                <>
-              <div
-                onClick={() => setExpanded(!expanded)}
-                style={{
-                  display: "flex",
-                  justifyContent: "flex-start",
-                  alignItems: "center",
-                  padding: "0px 20px",
-                }}
-              >
-                <div style={{ paddingRight: "30px", display: "flex" }}>
-                  {i &&
-                    (expanded ? (
-                      <IoMdArrowDropdown size={20} />
-                    ) : (
-                      <IoMdArrowDropup size={20} />
-                    ))}
+              <>
+                <div
+                  onClick={() => setExpanded({index:idx,value: idx === expanded.index ? !expanded.value : true})}
+                  style={{
+                    display: "flex",
+                    justifyContent: "flex-start",
+                    alignItems: "center",
+                    padding: "0px 20px",
+                    margin:"30px 0px "
+                  }}
+                >
+                  <div style={{ paddingRight: "30px", display: "flex" }}>
+                    {i &&
+                      (expanded.value && idx === expanded.index ? (
+                        <IoMdArrowDropdown size={20} />
+                      ) : (
+                        <IoMdArrowDropup size={20} />
+                      ))}
+                  </div>
+                  <div style={{ width: "200px" }}>{i.title}</div>
+                  <div style={{ width: "200px" }}>{i.director}</div>
+                  <div style={{ width: "200px" }}>{i.company}</div>
+                  <div style={{ width: "200px" }}>{i.gross}</div>
+                  <div style={{ width: "200px" }}>{i.budget}</div>
                 </div>
-                <div style={{ width: "200px" }}>{i.title}</div>
-                <div style={{ width: "200px" }}>
-                  {i.director}
-                </div>
-                <div style={{ width: "200px" }}>{i.company}</div>
-                <div style={{ width: "200px" }}>{i.gross}</div>
-                <div style={{ width: "200px" }}>{i.budget}</div>
-              </div>
 
-              {expanded && (
-          
-          <DataGridPro
-            //   {...dataGridPanel}
+                {expanded.value && idx === expanded.index && (
+                  <DataGridPro
+                    //   {...dataGridPanel}
 
-            rows={i.tableData}
-            columns={COLUMNS}
-            getDetailPanelHeight={getDetailPanelHeight}
-            sx={{
-              "& .MuiDataGrid-detailPanel": {
-                overflow: "visible",
-              },
-            }}
-          />
-       
-        )}
-</>
+                    rows={i.tableData}
+                    columns={COLUMNS}
+                    getDetailPanelHeight={getDetailPanelHeight}
+                    sx={{
+                      "& .MuiDataGrid-detailPanel": {
+                        overflow: "visible",
+                      },
+                    }}
+                  />
+                )}
+              </>
             );
           })}
-
-          
         </div>
       </div>
     );
@@ -625,9 +623,8 @@ export default function ControlMasterDetail() {
           detailPanelExpandedRowIds: {JSON.stringify(detailPanelExpandedRowIds)}
         </code>
       </Alert>
-   
+
       <DataGridPro
-       
         {...data}
         columns={COLUMNS}
         getDetailPanelContent={getDetailPanelContent}
@@ -637,10 +634,6 @@ export default function ControlMasterDetail() {
           handleDetailPanelExpandedRowIdsChange
         }
       />
-    
     </Box>
   );
 }
-
-
-
