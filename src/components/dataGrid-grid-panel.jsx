@@ -36,41 +36,28 @@ export default function ControlMasterDetail() {
         composer: {
           name: "James Horner",
         },
-        firstChild: {
-          id: 0,
-          title: "Avatar",
-          gross: 2847246203,
-          budget: 237000000,
-          director: "James Cameron",
+        firstChildArr: [
+          {
+            id: 0,
+            title: "Avatar",
+            gross: 2847246203,
+            budget: 237000000,
+            director: "James Cameron",
 
-          company: "20th Century Fox",
-          year: 2009,
-          imdbRating: 7.9,
-          composer: {
-            name: "James Horner",
-          },
-          tableData: [
-            {
-              id: 1000,
-              title: "Avatar",
-              gross: 2847246203,
-              budget: 237000000,
-              director: "James Cameron",
-
-              company: "20th Century Fox",
-              year: 2009,
-              imdbRating: 7.9,
-              composer: {
-                name: "James Horner",
-              },
+            company: "20th Century Fox",
+            year: 2009,
+            imdbRating: 7.9,
+            composer: {
+              name: "James Horner",
             },
-            {
-                id: 100,
-                title: "BroadBand",
+            tableData: [
+              {
+                id: 1000,
+                title: "Avatar",
                 gross: 2847246203,
                 budget: 237000000,
                 director: "James Cameron",
-  
+
                 company: "20th Century Fox",
                 year: 2009,
                 imdbRating: 7.9,
@@ -84,7 +71,7 @@ export default function ControlMasterDetail() {
                 gross: 2847246203,
                 budget: 237000000,
                 director: "James Cameron",
-  
+
                 company: "20th Century Fox",
                 year: 2009,
                 imdbRating: 7.9,
@@ -98,7 +85,7 @@ export default function ControlMasterDetail() {
                 gross: 2847246203,
                 budget: 237000000,
                 director: "James Cameron",
-  
+
                 company: "20th Century Fox",
                 year: 2009,
                 imdbRating: 7.9,
@@ -112,7 +99,7 @@ export default function ControlMasterDetail() {
                 gross: 2847246203,
                 budget: 237000000,
                 director: "James Cameron",
-  
+
                 company: "20th Century Fox",
                 year: 2009,
                 imdbRating: 7.9,
@@ -126,7 +113,7 @@ export default function ControlMasterDetail() {
                 gross: 2847246203,
                 budget: 237000000,
                 director: "James Cameron",
-  
+
                 company: "20th Century Fox",
                 year: 2009,
                 imdbRating: 7.9,
@@ -140,7 +127,7 @@ export default function ControlMasterDetail() {
                 gross: 2847246203,
                 budget: 237000000,
                 director: "James Cameron",
-  
+
                 company: "20th Century Fox",
                 year: 2009,
                 imdbRating: 7.9,
@@ -148,8 +135,137 @@ export default function ControlMasterDetail() {
                   name: "James Horner",
                 },
               },
-          ],
-        },
+              {
+                id: 100,
+                title: "BroadBand",
+                gross: 2847246203,
+                budget: 237000000,
+                director: "James Cameron",
+
+                company: "20th Century Fox",
+                year: 2009,
+                imdbRating: 7.9,
+                composer: {
+                  name: "James Horner",
+                },
+              },
+            ],
+          },
+          {
+            id: 0,
+            title: "Avatar",
+            gross: 2847246203,
+            budget: 237000000,
+            director: "James Cameron",
+
+            company: "20th Century Fox",
+            year: 2009,
+            imdbRating: 7.9,
+            composer: {
+              name: "James Horner",
+            },
+            tableData: [
+              {
+                id: 1000,
+                title: "Avatar",
+                gross: 2847246203,
+                budget: 237000000,
+                director: "James Cameron",
+
+                company: "20th Century Fox",
+                year: 2009,
+                imdbRating: 7.9,
+                composer: {
+                  name: "James Horner",
+                },
+              },
+              {
+                id: 100,
+                title: "BroadBand",
+                gross: 2847246203,
+                budget: 237000000,
+                director: "James Cameron",
+
+                company: "20th Century Fox",
+                year: 2009,
+                imdbRating: 7.9,
+                composer: {
+                  name: "James Horner",
+                },
+              },
+              {
+                id: 100,
+                title: "BroadBand",
+                gross: 2847246203,
+                budget: 237000000,
+                director: "James Cameron",
+
+                company: "20th Century Fox",
+                year: 2009,
+                imdbRating: 7.9,
+                composer: {
+                  name: "James Horner",
+                },
+              },
+              {
+                id: 100,
+                title: "BroadBand",
+                gross: 2847246203,
+                budget: 237000000,
+                director: "James Cameron",
+
+                company: "20th Century Fox",
+                year: 2009,
+                imdbRating: 7.9,
+                composer: {
+                  name: "James Horner",
+                },
+              },
+              {
+                id: 100,
+                title: "BroadBand",
+                gross: 2847246203,
+                budget: 237000000,
+                director: "James Cameron",
+
+                company: "20th Century Fox",
+                year: 2009,
+                imdbRating: 7.9,
+                composer: {
+                  name: "James Horner",
+                },
+              },
+              {
+                id: 100,
+                title: "BroadBand",
+                gross: 2847246203,
+                budget: 237000000,
+                director: "James Cameron",
+
+                company: "20th Century Fox",
+                year: 2009,
+                imdbRating: 7.9,
+                composer: {
+                  name: "James Horner",
+                },
+              },
+              {
+                id: 100,
+                title: "BroadBand",
+                gross: 2847246203,
+                budget: 237000000,
+                director: "James Cameron",
+
+                company: "20th Century Fox",
+                year: 2009,
+                imdbRating: 7.9,
+                composer: {
+                  name: "James Horner",
+                },
+              },
+            ],
+          },
+        ],
       },
       {
         id: 1,
@@ -299,7 +415,7 @@ export default function ControlMasterDetail() {
 
   const DetailPanelContentComp = ({ row }) => {
     console.log(row, "row inside grid panel");
-    console.log(row.firstChild.tableData, "table data of first child");
+    // console.log(row.firstChild.tableData, "table data of first child");
     const [expanded, setExpanded] = useState(true);
     // const dataGridPanel = {
     //     "rows": [
@@ -395,51 +511,65 @@ export default function ControlMasterDetail() {
     const getDetailPanelHeight = React.useCallback(() => 50, []);
 
     return (
-        <div style={{ height: "100%", overflow: "auto" }}>
-      <div
-        style={{ display: "flex", flexDirection: expanded ? "column" : "row" }}
-      >
+      <div style={{ height: "100%", overflow: "auto" }}>
         <div
-          onClick={() => setExpanded(!expanded)}
           style={{
             display: "flex",
-            justifyContent: "flex-start",
-            alignItems: "center",
-            padding: "0px 20px",
+            flexDirection: "column",
           }}
         >
-          <div style={{ paddingRight: "30px", display: "flex" }}>
-            {row?.firstChild &&
-              (expanded ? (
-                <IoMdArrowDropdown size={20} />
-              ) : (
-                <IoMdArrowDropup size={20} />
-              ))}
-          </div>
-          <div style={{ width: "200px" }}>{row?.firstChild?.title}</div>
-          <div style={{ width: "200px" }}>{row?.firstChild?.director}</div>
-          <div style={{ width: "200px" }}>{row?.firstChild?.company}</div>
-          <div style={{ width: "200px" }}>{row?.firstChild?.gross}</div>
-          <div style={{ width: "200px" }}>{row?.firstChild?.budget}</div>
-          {/* {expanded ? "expanded" :  "NOt Expanded"} */}
-        </div>
-        {expanded && (
-        //   <Box sx={{ width: "100%", height: 800 }}>
-            <DataGridPro
-              //   {...dataGridPanel}
+          {row.firstChildArr.map((i) => {
+            return (
 
-              rows={row.firstChild.tableData}
-              columns={COLUMNS}
-              getDetailPanelHeight={getDetailPanelHeight}
-              sx={{
-                "& .MuiDataGrid-detailPanel": {
-                  overflow: "visible",
-                },
-              }}
-            />
-        //   </Box>
+                <>
+              <div
+                onClick={() => setExpanded(!expanded)}
+                style={{
+                  display: "flex",
+                  justifyContent: "flex-start",
+                  alignItems: "center",
+                  padding: "0px 20px",
+                }}
+              >
+                <div style={{ paddingRight: "30px", display: "flex" }}>
+                  {i &&
+                    (expanded ? (
+                      <IoMdArrowDropdown size={20} />
+                    ) : (
+                      <IoMdArrowDropup size={20} />
+                    ))}
+                </div>
+                <div style={{ width: "200px" }}>{i.title}</div>
+                <div style={{ width: "200px" }}>
+                  {i.director}
+                </div>
+                <div style={{ width: "200px" }}>{i.company}</div>
+                <div style={{ width: "200px" }}>{i.gross}</div>
+                <div style={{ width: "200px" }}>{i.budget}</div>
+              </div>
+
+              {expanded && (
+          
+          <DataGridPro
+            //   {...dataGridPanel}
+
+            rows={i.tableData}
+            columns={COLUMNS}
+            getDetailPanelHeight={getDetailPanelHeight}
+            sx={{
+              "& .MuiDataGrid-detailPanel": {
+                overflow: "visible",
+              },
+            }}
+          />
+       
         )}
-      </div>
+</>
+            );
+          })}
+
+          
+        </div>
       </div>
     );
   };
@@ -495,73 +625,22 @@ export default function ControlMasterDetail() {
           detailPanelExpandedRowIds: {JSON.stringify(detailPanelExpandedRowIds)}
         </code>
       </Alert>
-      {/* <Box sx={{ height: 400, mt: 1 }}> */}
-        <DataGridPro
-          //   rows={rows}
-          {...data}
-          columns={COLUMNS}
-          getDetailPanelContent={
-           
-            getDetailPanelContent
-          }
-          getDetailPanelHeight={getDetailPanelHeight}
-          detailPanelExpandedRowIds={detailPanelExpandedRowIds}
-          onDetailPanelExpandedRowIdsChange={
-            handleDetailPanelExpandedRowIdsChange
-          }
-        />
-      {/* </Box> */}
+   
+      <DataGridPro
+       
+        {...data}
+        columns={COLUMNS}
+        getDetailPanelContent={getDetailPanelContent}
+        getDetailPanelHeight={getDetailPanelHeight}
+        detailPanelExpandedRowIds={detailPanelExpandedRowIds}
+        onDetailPanelExpandedRowIdsChange={
+          handleDetailPanelExpandedRowIdsChange
+        }
+      />
+    
     </Box>
   );
 }
 
-// const columns = [
-//   { field: 'id', headerName: 'Order ID' },
-//   { field: 'customer', headerName: 'Customer', width: 200 },
-//   { field: 'date', type: 'date', headerName: 'Placed at' },
-//   { field: 'currency', headerName: 'Currency' },
-//   { field: 'total', type: 'number', headerName: 'Total' },
-// ];
 
-const rows = [
-  {
-    id: 1,
-    customer: "Matheus",
-    email: randomEmail(),
-    date: randomCreatedDate(),
-    currency: randomCurrency(),
-    total: randomPrice(1, 1000),
-  },
-  {
-    id: 2,
-    customer: "Olivier",
-    email: randomEmail(),
-    date: randomCreatedDate(),
-    currency: randomCurrency(),
-    total: randomPrice(1, 1000),
-  },
-  {
-    id: 3,
-    customer: "Flavien",
-    email: randomEmail(),
-    date: randomCreatedDate(),
-    currency: randomCurrency(),
-    total: randomPrice(1, 1000),
-  },
-  {
-    id: 4,
-    customer: "Danail",
-    email: randomEmail(),
-    date: randomCreatedDate(),
-    currency: randomCurrency(),
-    total: randomPrice(1, 1000),
-  },
-  {
-    id: 5,
-    customer: "Alexandre",
-    email: randomEmail(),
-    date: randomCreatedDate(),
-    currency: randomCurrency(),
-    total: randomPrice(1, 1000),
-  },
-];
+
