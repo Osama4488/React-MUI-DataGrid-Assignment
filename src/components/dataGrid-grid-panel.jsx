@@ -65,90 +65,20 @@ export default function ControlMasterDetail() {
                   name: "James Horner",
                 },
               },
-              {
-                id: 100,
-                title: "BroadBand",
-                gross: 2847246203,
-                budget: 237000000,
-                director: "James Cameron",
+              //   {
+              //     id: 100,
+              //     title: "BroadBand",
+              //     gross: 2847246203,
+              //     budget: 2567,
+              //     director: "James Cameron",
 
-                company: "20th Century Fox",
-                year: 2009,
-                imdbRating: 7.9,
-                composer: {
-                  name: "James Horner",
-                },
-              },
-              {
-                id: 145,
-                title: "BroadBand",
-                gross: 2847246203,
-                budget: 237000000,
-                director: "James Cameron",
-
-                company: "20th Century Fox",
-                year: 2009,
-                imdbRating: 7.9,
-                composer: {
-                  name: "James Horner",
-                },
-              },
-              {
-                id: 1465,
-                title: "BroadBand",
-                gross: 2847246203,
-                budget: 237000000,
-                director: "James Cameron",
-
-                company: "20th Century Fox",
-                year: 2009,
-                imdbRating: 7.9,
-                composer: {
-                  name: "James Horner",
-                },
-              },
-              {
-                id: 167,
-                title: "BroadBand",
-                gross: 2847246203,
-                budget: 237000000,
-                director: "James Cameron",
-
-                company: "20th Century Fox",
-                year: 2009,
-                imdbRating: 7.9,
-                composer: {
-                  name: "James Horner",
-                },
-              },
-              {
-                id: 189,
-                title: "BroadBand",
-                gross: 2847246203,
-                budget: 237000000,
-                director: "James Cameron",
-
-                company: "20th Century Fox",
-                year: 2009,
-                imdbRating: 7.9,
-                composer: {
-                  name: "James Horner",
-                },
-              },
-              {
-                id: 198,
-                title: "BroadBand",
-                gross: 2847246203,
-                budget: 237000000,
-                director: "James Cameron",
-
-                company: "20th Century Fox",
-                year: 2009,
-                imdbRating: 7.9,
-                composer: {
-                  name: "James Horner",
-                },
-              },
+              //     company: "20th Century Fox",
+              //     year: 2009,
+              //     imdbRating: 7.9,
+              //     composer: {
+              //       name: "James Horner",
+              //     },
+              //   },
             ],
           },
           {
@@ -181,76 +111,6 @@ export default function ControlMasterDetail() {
               },
               {
                 id: 100,
-                title: "BroadBand",
-                gross: 2847246203,
-                budget: 237000000,
-                director: "James Cameron",
-
-                company: "20th Century Fox",
-                year: 2009,
-                imdbRating: 7.9,
-                composer: {
-                  name: "James Horner",
-                },
-              },
-              {
-                id: 1001,
-                title: "BroadBand",
-                gross: 2847246203,
-                budget: 237000000,
-                director: "James Cameron",
-
-                company: "20th Century Fox",
-                year: 2009,
-                imdbRating: 7.9,
-                composer: {
-                  name: "James Horner",
-                },
-              },
-              {
-                id: 1002,
-                title: "BroadBand",
-                gross: 2847246203,
-                budget: 237000000,
-                director: "James Cameron",
-
-                company: "20th Century Fox",
-                year: 2009,
-                imdbRating: 7.9,
-                composer: {
-                  name: "James Horner",
-                },
-              },
-              {
-                id: 1003,
-                title: "BroadBand",
-                gross: 2847246203,
-                budget: 237000000,
-                director: "James Cameron",
-
-                company: "20th Century Fox",
-                year: 2009,
-                imdbRating: 7.9,
-                composer: {
-                  name: "James Horner",
-                },
-              },
-              {
-                id: 1004,
-                title: "BroadBand",
-                gross: 2847246203,
-                budget: 237000000,
-                director: "James Cameron",
-
-                company: "20th Century Fox",
-                year: 2009,
-                imdbRating: 7.9,
-                composer: {
-                  name: "James Horner",
-                },
-              },
-              {
-                id: 1005,
                 title: "BroadBand",
                 gross: 2847246203,
                 budget: 237000000,
@@ -415,11 +275,17 @@ export default function ControlMasterDetail() {
 
   const DetailPanelContentComp = ({ row }) => {
     const [expanded, setExpanded] = useState({
-        index:0,
-        value:true
+      index: 0,
+      value: true,
     });
+    const [dropdowns, setDropdowns] = useState([0]);
 
-    console.log(row, "row inside grid panel");
+    useEffect(() => {
+      console.log(dropdowns, "dropdowns");
+    }, [dropdowns]);
+
+    // console.log(row, "row inside grid panel");
+
     // console.log(row.firstChild.tableData, "table data of first child");
     // const dataGridPanel = {
     //     "rows": [
@@ -509,9 +375,9 @@ export default function ControlMasterDetail() {
     //     ]
     // }
 
-    useEffect(() => {
-      console.log(expanded, "expanded");
-    }, [expanded]);
+    // useEffect(() => {
+    //   console.log(expanded, "expanded");
+    // }, [expanded]);
     const getDetailPanelHeight = React.useCallback(() => 50, []);
 
     return (
@@ -522,22 +388,41 @@ export default function ControlMasterDetail() {
             flexDirection: "column",
           }}
         >
-          {row.childExpandedArr.map((i,idx) => {
+          {row.childExpandedArr.map((i, idx) => {
             return (
               <>
                 <div
-                  onClick={() => setExpanded({index:idx,value: idx === expanded.index ? !expanded.value : true})}
+                  onClick={() => {
+                    setExpanded({
+                      index: idx,
+                      value: idx === expanded.index ? !expanded.value : true,
+                    });
+
+                    if (dropdowns.includes(idx)) {
+                      const newArray = dropdowns.filter(
+                        (item, index) => item !== idx
+                      );
+                      setDropdowns(newArray);
+                    } else {
+                      setDropdowns((prev) => [...prev, idx]);
+                    }
+                  }}
                   style={{
                     display: "flex",
                     justifyContent: "flex-start",
                     alignItems: "center",
                     padding: "0px 20px",
-                    margin:"30px 0px "
+                    margin: "30px 0px ",
                   }}
                 >
                   <div style={{ paddingRight: "30px", display: "flex" }}>
                     {i &&
-                      (expanded.value && idx === expanded.index ? (
+                      (
+                      
+
+                        dropdowns.includes(idx)
+                        
+                        ? (
                         <IoMdArrowDropdown size={20} />
                       ) : (
                         <IoMdArrowDropup size={20} />
@@ -550,10 +435,8 @@ export default function ControlMasterDetail() {
                   <div style={{ width: "200px" }}>{i.budget}</div>
                 </div>
 
-                {expanded.value && idx === expanded.index && (
+                {dropdowns.includes(idx) && (
                   <DataGridPro
-                    //   {...dataGridPanel}
-
                     rows={i.tableData}
                     columns={COLUMNS}
                     getDetailPanelHeight={getDetailPanelHeight}
@@ -564,6 +447,21 @@ export default function ControlMasterDetail() {
                     }}
                   />
                 )}
+
+                {/* {dropdowns.map((j) => {
+                    return(
+                        <DataGridPro
+                        rows={i.tableData}
+                        columns={COLUMNS}
+                        getDetailPanelHeight={getDetailPanelHeight}
+                        sx={{
+                          "& .MuiDataGrid-detailPanel": {
+                            overflow: "visible",
+                          },
+                        }}
+                      />
+                    )
+                })} */}
               </>
             );
           })}

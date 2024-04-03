@@ -152,9 +152,9 @@ export default function TreeDataFullExample() {
     setChecked(event.target.checked);
   };
 
-  useEffect(() => {
-    console.log(checked,"checked")
-  },[checked])
+  // useEffect(() => {
+  //   console.log(checked,"checked")
+  // },[checked])
     
   return (
     // <BrowserRouter>
