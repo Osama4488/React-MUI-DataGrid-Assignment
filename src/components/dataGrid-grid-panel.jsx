@@ -417,12 +417,7 @@ export default function ControlMasterDetail() {
                 >
                   <div style={{ paddingRight: "30px", display: "flex" }}>
                     {i &&
-                      (
-                      
-
-                        dropdowns.includes(idx)
-                        
-                        ? (
+                      (dropdowns.includes(idx) ? (
                         <IoMdArrowDropdown size={20} />
                       ) : (
                         <IoMdArrowDropup size={20} />
@@ -439,29 +434,16 @@ export default function ControlMasterDetail() {
                   <DataGridPro
                     rows={i.tableData}
                     columns={COLUMNS}
-                    getDetailPanelHeight={getDetailPanelHeight}
+                    // getDetailPanelHeight={getDetailPanelHeight}
                     sx={{
-                      "& .MuiDataGrid-detailPanel": {
+                      "& .MuiDataGrid-detailPanel": { 
                         overflow: "visible",
                       },
                     }}
                   />
                 )}
 
-                {/* {dropdowns.map((j) => {
-                    return(
-                        <DataGridPro
-                        rows={i.tableData}
-                        columns={COLUMNS}
-                        getDetailPanelHeight={getDetailPanelHeight}
-                        sx={{
-                          "& .MuiDataGrid-detailPanel": {
-                            overflow: "visible",
-                          },
-                        }}
-                      />
-                    )
-                })} */}
+              
               </>
             );
           })}

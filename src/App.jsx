@@ -132,6 +132,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const DataGridNormal = lazy(() => import("./components/data-grid-normal") )
 const DataGridGridPanel = lazy(() => import("./components/dataGrid-grid-panel"))
+const DataGridThreeChild = lazy(() => import("./components/grid-three-child"))
 
 
 import Blogs from "./components/Blogs";
@@ -193,12 +194,17 @@ export default function TreeDataFullExample() {
       <Suspense fallback={"Loading..."}>
       <div style={{marginTop:"50px",width:"100%"}}>
       {checked ?
-      <DataGridGridPanel />
+
+      <DataGridThreeChild/>
+
       
      : 
       
       // <AntdComp />
-      <DataGridNormal />
+      // <DataGridNormal />
+
+      <DataGridGridPanel />
+
       }
       </div>
       </Suspense>
